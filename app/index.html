@@ -20,61 +20,35 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="landing-header">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
 
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
 
-            <a class="navbar-brand" href="#/">
-              <img src="http://placehold.it/80x40" alt="">
-            </a>
-          </div> <!-- navbar header -->
+    <div class="navbar navbar-default navbar-no-margin" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
 
-          <div class="collapse navbar-collapse" id="js-navbar-collapse">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
 
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#/">Home</a></li>
-              <li><a ng-href="#/about">About</a></li>
-              <li><a ng-href="#/">Contact</a></li>
-            </ul>
-          </div>
+          <a class="navbar-brand" href="#/">
+            <img src="http://placehold.it/80x40" alt="">
+          </a>
+        </div> <!-- navbar header -->
+
+        <div class="collapse navbar-collapse" id="js-navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#/">Home</a></li>
+            <li><a ng-href="#/about">About</a></li>
+            <li><a ng-href="#/">Contact</a></li>
+          </ul>
         </div>
       </div>
-      <div class="main">
-        <div class="main-inner">
-            <h1>INTELLIGENT PLANNING<br/>
-            <i class="landing-highlight">CO-CREATION</i> PLATFORM
-          </h1>
-          <div class="landing-dividor"></div>
-          <h4>智能规划协同创新平台</h4>
-        </div>
-      </div>
-      <div class="contact">
-        <div class="container">
-          <div>
-            <span class="contact-item">
-              <i class="glyphicon glyphicon-envelope"></i>
-              admin@tongji.edu.cn
-            </span>
-            <span class="contact-item">
-              <i class="glyphicon glyphicon glyphicon-earphone"></i>
-              (+86) 6598-9999
-            </span>
-          </div> <!-- left contact -->
-        </div>
-      </div>
-    </div>
+    </div> <!-- navbar -->
 
-    <div class="container">
     <div ng-view=""></div>
-    </div>
 
     <div class="footer">
       <div class="container">
