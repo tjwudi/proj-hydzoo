@@ -17,4 +17,14 @@
   .main-inner {
     text-align: center;
   }
+
+  .contact {
+    padding: 10px 0;
+    background-color: lighten(gray, 20%);
+  }
+
+  .contact-item {
+    display: inline-block;
+    margin-right: 20px;
+  }
 }
