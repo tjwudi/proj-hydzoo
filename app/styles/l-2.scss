@@ -1,0 +1,22 @@
+.hydzoo .l-2 {
+  header {
+    text-transform: uppercase;
+  }
+
+  .i-1 {
+    width: 100%;
+  }
+
+  .dividor {
+    width: 80px;
+    height: 3px;
+    background: blue;
+    display: inline-block;
+  }
+
+  .feature {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+}
