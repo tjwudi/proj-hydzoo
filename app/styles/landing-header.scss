@@ -1,0 +1,20 @@
+.hydzoo .landing-header {
+  background: gray;
+  .main {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .landing-dividor {
+    display: inline-block;
+    height: 1px;
+    width: 60px;
+    background-color: black;
+  }
+
+  .main-inner {
+    text-align: center;
+  }
+}
