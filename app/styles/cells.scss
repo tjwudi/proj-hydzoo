@@ -1,0 +1,26 @@
+.hydzoo .cells {
+  .cell {
+    height: 250px;
+    outline: 1px solid red;
+    width: 50%;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .inner {
+    text-align: center;
+  }
+
+  .dividor-wrap {
+    text-align: center;
+  }
+
+  .dividor {
+    display: inline-block;
+    height: 1px;
+    width: 30px;
+    background-color: red;
+  }
+}
