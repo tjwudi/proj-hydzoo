@@ -33,12 +33,12 @@
           <h2>Intelligent Planning Co-Creation PLATFORM.</h2>
           <div class="dividor"></div>
         </header>
-        <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea hic deleniti, modi, blanditiis veritatis reiciendis vel iusto possimus! Ipsa distinctio natus ex culpa dolorem laboriosam nisi atque rem temporibus nemo.</span>
+        <p class="hint-text"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea hic deleniti, modi, blanditiis veritatis reiciendis vel iusto possimus! Ipsa distinctio natus ex culpa dolorem laboriosam nisi atque rem temporibus nemo.</span>
         <span>Odit cum provident magni dolorum inventore impedit ex consequuntur repudiandae aut sed quasi in, ipsum, eius fugit soluta aliquam enim dignissimos laborum reiciendis omnis error ad ducimus laudantium nam. Perferendis.</span>
         <span>Quae perspiciatis eius, doloremque magnam vel temporibus dicta dolores fuga soluta harum nisi culpa odit natus eveniet quibusdam, facilis cum omnis tempore earum unde delectus hic? Nostrum iusto repellat animi?</span></p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, autem! Harum, enim neque aperiam dolor nemo impedit, autem a. Minus in tenetur recusandae ut exercitationem omnis autem porro mollitia quia.</p>
+        <p class="hint-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, autem! Harum, enim neque aperiam dolor nemo impedit, autem a. Minus in tenetur recusandae ut exercitationem omnis autem porro mollitia quia.</p>
         <div>
-          <div class="btn btn-primary">DOWNLOAD RESUME</div>
+          <a href="#" class="btn btn-primary btn-download">DOWNLOAD RESUME</a>
         </div>
       </div>
       <div class="col-md-4 img-wrap">
@@ -50,11 +50,9 @@
         <aside class="feature-icon">
           <img src="//placehold.it/30x30" alt="">
         </aside>
-        <div>
-          <header>
-            <h6>Perfect Responsive</h6>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis nisi itaque magnam ratione ut explicabo enim, magni nesciunt illo.</p>
-          </header>
+        <div class="content">
+          <h6 class="title">Perfect Responsive</h6>
+          <p class="hint-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis nisi itaque magnam ratione ut explicabo enim, magni nesciunt illo.</p>
         </div>
       </section>
     </div> <!-- features -->
@@ -63,14 +61,14 @@
 </section> <!-- l-2 -->
 
 <section class="l-3">
-  <div class="container-fluid">
+  <div class="container">
     <div class="row">
       <div class="col-md-3">
         <div class="subtitle">Our</div>
         <div class="title">Events</div>
       </div>
       <div class="col-md-9">
-        <ul class="links">
+        <ul class="links clearfix">
           <li class="link"><a href="#">Links</a></li>
           <li class="link"><a href="#">Think Tank</a></li>
           <li class="link"><a href="#">Research Project</a></li>
@@ -83,6 +81,7 @@
 
 <section class="cells clearfix">
   <section class="cell" ng-repeat="i in [1,2,3,4]">
+    <div class="backcover"></div>
     <div class="inner">
       <div class="dividor-wrap">
         <span class="dividor"></span>
@@ -90,9 +89,9 @@
       <div class="title">CITIES</div>
       <div class="subtitle">城市模块</div>
       <div class="cta">
-        <div class="btn btn-primary">
+        <a href="#" class="btn btn-primary btn-infolink">
           Info
-        </div>
+        </a>
       </div>
     </div>
   </section>
@@ -132,9 +131,12 @@
   </form>
 </section>
 
-<footer>
-  <div class="logo">
-    <img src="http://placehold.it/80x40" alt="">
+<footer class="site-footer">
+  <div class="container wrap">
+    <div class="logo">
+      <img src="http://placehold.it/80x40" alt=""/>
+    </div>
+    <p>&copy; 2015 XXX</p>
   </div>
-  <p>&copy; 2015 XXX</p>
+
 </footer>

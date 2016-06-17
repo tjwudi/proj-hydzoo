@@ -1,4 +1,6 @@
 .hydzoo .l-2 {
+  padding: 30px 0;
+
   header {
     text-transform: uppercase;
   }
@@ -8,15 +10,38 @@
   }
 
   .dividor {
-    width: 80px;
+    width: 42px;
     height: 3px;
-    background: blue;
+    background: black;
     display: inline-block;
+    margin-bottom: 42px;
+    margin-top: 12px;
+  }
+
+  .features {
+    margin-top: 48px;
+    margin-bottom: 96px;
   }
 
   .feature {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+
+    .content {
+      margin-left: 12px;
+      position: relative;
+      top: -6px;
+    }
+
+    .title {
+      font-size: 16px;
+    }
+  }
+
+  .btn-download {
+    background: black;
+    border-radius: 0;
+    margin-top: 32px;
   }
 }

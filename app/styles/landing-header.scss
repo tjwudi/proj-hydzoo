@@ -1,7 +1,15 @@
 .hydzoo .landing-header {
-  background: gray;
+  background-image: linear-gradient(90deg, rgb(52, 73, 94) 25%, rgb(41, 128, 185) 100%);
+  background-image: -moz-linear-gradient(left, rgb(52, 73, 94) 25%, rgb(41, 128, 185) 100%);
+  background-image: -webkit-linear-gradient(left, rgb(52, 73, 94) 25%, rgb(41, 128, 185) 100%);
+  background-image: -o-linear-gradient(left, rgb(52, 73, 94) 25%, rgb(41, 128, 185) 100%);
+  background-image: -ms-linear-gradient(left, rgb(52, 73, 94) 25%, rgb(41, 128, 185) 100%);
+  position: relative;
+  top: -104px;
+  z-index: -1;
+
   .main {
-    height: 400px;
+    height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,7 +28,8 @@
 
   .contact {
     padding: 10px 0;
-    background-color: lighten(gray, 20%);
+    background-color: black;
+    color: white;
   }
 
   .contact-item {

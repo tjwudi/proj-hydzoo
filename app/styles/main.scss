@@ -8,7 +8,14 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "l-3.scss";
 @import "cells.scss";
 @import "contact.scss";
+@import "footer.scss";
 
 body {
   padding: 0;
 }
+
+.hint-text {
+  color: gray;
+  font-size: 14px;
+}
+
