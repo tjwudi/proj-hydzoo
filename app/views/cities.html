@@ -14,7 +14,7 @@
       </select>
       <label for="year">数据：</label>
       <select name="year" id="year" ng-model="dIndex">
-        <option value="0">土地面积建成区</option>
+        <option value="{{title.id}}" ng-repeat="title in titles track by $index">{{title.title}}</option>
       </select>
     </form>
   </div>

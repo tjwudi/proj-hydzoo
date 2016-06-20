@@ -12,11 +12,11 @@ angular.module('hydzooApp')
       'mapdata': '='
     },
     link: function (scope, el) {
-      const mapid = 'vmap-' + String(Math.floor(Math.random() * 1000000));
+      var mapid = 'vmap-' + String(Math.floor(Math.random() * 1000000));
       var map;
+      var layer;
 
-      function reloadLayer(mapstyle) {
-        console.log(scope);
+      function buildLayer(mapstyle) {
         map = new BMap.Map(mapid);
         map.centerAndZoom(new BMap.Point(101,31), 5);
         map.setMapStyle({
@@ -27,11 +27,11 @@ angular.module('hydzooApp')
             drawTypeControl: true,
             map: map  // 百度地图的map实例
         });
-        var layer = new Mapv.Layer({
+        layer = new Mapv.Layer({
           zIndex: 3, // 图层的层级
           mapv: mapv, // 对应的mapv
           dataType: 'point', // 数据类型，point:点数据类型,polyline:线数据类型,polygon:面数据类型
-          data: scope.mapdata,
+          data: [],
           drawType: 'density', // 渲染数据方式, simple:普通的打点, [更多查看类参考](https://github.com/huiyan-fe/mapv/wiki/%E7%B1%BB%E5%8F%82%E8%80%83)
           // 渲染数据参数
           drawOptions: { // 绘制参数
@@ -53,20 +53,27 @@ angular.module('hydzooApp')
         });
       }
 
+      function reloadLayer(data) {
+        if (layer) {
+          layer.set('data', data);
+        }
+      }
+
       el.find('.vmap').attr('id', mapid);
 
       $http({
         method: 'GET',
         url: '/data/mapstyle.json'
       }).then(function (res) {
-        const mapstyle = res.data;
-        reloadLayer(mapstyle);
+        var mapstyle = res.data;
+        buildLayer(mapstyle);
       }, function () {
         alert('Failed to load mapstyle.json!');
       });
 
-      scope.$watch('mapdata', function () {
-        reloadLayer();
+      scope.$watch('mapdata', function (newVal) {
+        reloadLayer(newVal);
+        console.log(newVal[0]);
       });
     }
   };
