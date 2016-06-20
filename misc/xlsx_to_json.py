@@ -6,14 +6,21 @@ import io
 
 from openpyxl import load_workbook
 
+geolocation_cache = {}
+
 def get_geolocation(cityname):
-  gdurl = u'http://restapi.amap.com/v3/place/text?key=630453d378a207fc36c27613bac3ed8f&keywords={0}'.format(cityname)
+  if cityname in geolocation_cache:
+    return geolocation_cache[cityname]
+  gdurl = u'http://restapi.amap.com/v3/place/text?key=54b332cf25cc8180aab6e5dff7e787bb&keywords={0}'.format(cityname)
   res = requests.get(gdurl)
   json_res = res.json()
   assert json_res['status'] == '1'
-  assert len(json_res) > 0
+  if len(json_res['pois']) == 0:
+    print(u"Geolocation not found for {0}".format(cityname))
+    return None
   poi = json_res['pois'][0]
   location = map(lambda x: float(x), poi['location'].split(','))
+  geolocation_cache[cityname] = location
   return location
 
 xls_path = sys.argv[1]
@@ -41,6 +48,8 @@ for row in ws.rows:
     continue
   cityname = row[0].value
   geolocation = get_geolocation(cityname)
+  if geolocation is None:
+    continue
   print(u'Geolocation {0}: {1}, {2}'.format(cityname, geolocation[0], geolocation[1]))
 
   dataitem = {
