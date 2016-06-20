@@ -5,9 +5,20 @@
   </header>
 </section>
 
-<div class="container">
-  <iframe class="map" src="http://0.0.0.0:8080/twoFactor_rander.html" frameborder="0"
-  style="height:800px; width: 100%"></iframe>
+<div class="container cityvis">
+  <div class="controls">
+    <form novalidate>
+      <label for="year">Year:</label>
+      <select name="year" id="year" ng-model="year">
+        <option value="1997">1997</option>
+      </select>
+      <label for="year">数据：</label>
+      <select name="year" id="year" ng-model="dIndex">
+        <option value="0">土地面积建成区</option>
+      </select>
+    </form>
+  </div>
+  <mapv mapdata="mapvData"/>
 </div>
 
 <footer class="site-footer">
