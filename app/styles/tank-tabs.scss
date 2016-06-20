@@ -1,0 +1,45 @@
+@import "compass/utilities/general/clearfix";
+
+$sblue: #0082D2;
+
+.hydzoo .tank-tabs {
+  margin: 0;
+  padding: 0;
+  @include clearfix;
+
+  .tank-tab {
+    list-style-type: none;
+  }
+
+  .tank-tab-link {
+    display: inline-block;
+    padding: 30px 15px;
+    text-transform: uppercase;
+    width: 100%;
+    border-top: 1px solid transparent;
+    cursor: pointer;
+
+    &:hover {
+      background: transparentize($sblue, 0.9);
+      text-decoration: none;
+    }
+
+    &.current {
+      background: transparentize($sblue, 0.9);
+      border-top: 1px solid $sblue;
+    }
+
+    & > .link-text {
+      margin-bottom: 6px;
+      color: $sblue;
+    }
+
+    & > .link-text.link-text--en {
+      font-weight: bold;
+    }
+
+    & > .link-text.link-text--cn {
+      font-weight: 200;
+    }
+  }
+}

@@ -24,12 +24,22 @@ angular
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
+      .when('/cities', {
+        templateUrl: 'views/cities.html',
+        controller: 'CitiesCtrl',
+        controllerAs: 'cities'
+      })
+     .when('/tank', {
+        templateUrl: 'views/tank.html',
+        controller: 'TankCtrl',
+        controllerAs: 'tank'
       })
       .otherwise({
         redirectTo: '/'
       });
+  })
+  .run(function ($rootScope) {
+    $rootScope.$on('$routeChangeSuccess', function (e, current) {
+      $rootScope.isMain = current.$$route.controllerAs === 'main';
+    });
   });

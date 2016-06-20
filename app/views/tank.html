@@ -1,0 +1,48 @@
+<section>
+  <header>
+    <h1 class="pg-title">Think Tank</h1>
+    <h4 class="pg-subtitle">专家模块</h4>
+  </header>
+</section>
+
+<div class="container">
+  <div class="row">
+    <nav class="col-md-3">
+      <ul class="tank-tabs">
+        <li class="tank-tab">
+          <a ng-click="openTankTab(0)"
+            ng-class="['tank-tab-link', {current: currentTabIdx == 0}]">
+            <div class="link-text link-text--en">Intelligent Diagnosis</div>
+            <div class="link-text link-text--cn">智能诊断</div>
+          </a>
+          <a ng-click="openTankTab(1)"
+            ng-class="['tank-tab-link', {current: currentTabIdx == 1}]">
+            <div class="link-text link-text--en">Intelligent Urban Planning</div>
+            <div class="link-text link-text--cn">智能规划</div>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main class="col-md-8 gallery">
+      <div class="gallery-item" ng-repeat="d in currentTabData track by $index">
+        <div ng-if="d === 'blank'"></div>
+        <img ng-if="d !== 'blank'" src="//placehold.it/60x80" alt="" class="gallery-img">
+        <div ng-if="d !== 'blank'" class="gallery-info">
+          <p class="info-text info-title">{{d.title}}</p>
+          <p class="info-text">{{d.subtitle1}}</p>
+          <p class="info-text">{{d.subtitle2}}</p>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container wrap">
+    <div class="logo">
+      <img src="http://placehold.it/80x40" alt=""/>
+    </div>
+    <p>&copy; 2015 XXX</p>
+  </div>
+
+</footer>

@@ -9,6 +9,9 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "cells.scss";
 @import "contact.scss";
 @import "footer.scss";
+@import "map.scss";
+@import "tank-tabs.scss";
+@import "gallery.scss";
 
 body {
   padding: 0;
@@ -19,3 +22,15 @@ body {
   font-size: 14px;
 }
 
+.pg-title {
+  color: #0082D2;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.pg-subtitle {
+  font-weight: thin;
+  text-align: center;
+  margin-bottom: 60px;
+}

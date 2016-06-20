@@ -4,25 +4,38 @@
   }
 
   .navbar-default {
-    background: transparent;
     border: none;
     margin-top: 42px;
+    background: white;
 
     .navbar-nav {
       & > li > a {
-        color: white;
         font-weight: 700;
       }
 
       & > li.active > a {
         background: none;
-        color: yellow;
         text-decoration: underline;
         text-transform: uppercase;
       }
 
       & > li {
         margin-left: 60px;
+      }
+    }
+  }
+
+  .navbar-default.transparent {
+    background: transparent;
+
+    .navbar-nav {
+      & > li > a {
+        color: white;
+      }
+
+      & > li.active > a {
+        background: none;
+        color: yellow;
       }
     }
   }
