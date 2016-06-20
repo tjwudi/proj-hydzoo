@@ -9,8 +9,7 @@
   <div class="controls">
     <form novalidate>
       <label for="year">Year:</label>
-      <select name="year" id="year" ng-model="year">
-        <option value="1997">1997</option>
+      <select name="year" id="year" ng-model="year" ng-options="yearopt for yearopt in years">
       </select>
       <label for="year">数据：</label>
       <select name="year" id="year" ng-model="dIndex">
